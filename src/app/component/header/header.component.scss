@@ -1,0 +1,100 @@
+// navbar.component.scss
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  
+    .navbar-search {
+      display: flex;
+      align-items: center;
+  
+      input {
+        padding: 8px;
+        margin-right: 5px;
+        border: none;
+        border-radius: 3px;
+      }
+  
+      button {
+        background-color: #fff;
+        color: gray;
+        border: none;
+        padding: 8px;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #ecf0f1;
+        }
+      }
+    }
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: gray;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: rgb(156, 153, 153);
+  }
+
+  &:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+}
+  
+    .navbar-links {
+      list-style: none;
+      display: flex;
+  
+      li {
+        margin: 0 15px;
+  
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-weight: bold;
+          transition: color 0.3s ease;
+  
+          &:hover {
+            color: #ecf0f1;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+  
+      .navbar-links {
+        margin-top: 10px;
+        flex-direction: column;
+  
+        li {
+          margin: 5px 0;
+        }
+      }
+    }
+    button{
+      margin: 10px;
+    }
+  }
+  

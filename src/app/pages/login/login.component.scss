@@ -1,0 +1,92 @@
+// login.component.scss
+
+// Import Font Awesome styles (you may need to install it first)
+// Use the correct path to your Font Awesome styles
+@import "~font-awesome/css/font-awesome.min.css";
+body{
+  background-color: rgb(44, 42, 42);
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #dfdcdc;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .password-input-container {
+      position: relative;
+
+      input[type="password"] {
+        width: calc(100% - 30px);
+      }
+
+      /* Add this to your styles.scss or styles.css file */
+.show-password-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+}
+
+    }
+
+    .error-message {
+      color: #d9534f;
+      margin-top: 5px;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #5bc0de;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+
+  .forget-password-link,
+  .sign-up-link {
+    text-align: center;
+    margin-top: 15px;
+    color: #777;
+
+    a {
+      color: #337ab7;
+      text-decoration: none;
+    }
+  }
+}

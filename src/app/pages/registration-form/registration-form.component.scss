@@ -1,0 +1,102 @@
+/* registration-form.component.scss */
+
+body {
+  background-color: rgb(44, 42, 42);
+}
+
+.registration-container {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #dfdcdc;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+  }
+
+  form {
+    max-width: 250px;
+    margin: auto;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 8px;
+      font-size: 16px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: #2980b9;
+      }
+
+      &:disabled {
+        background-color: #bdc3c7;
+        cursor: not-allowed;
+      }
+
+      .sign-in-link {
+        text-align: center;
+        margin-top: 8px;
+        font-size: 14px;
+        color: #3498db;
+      }
+
+      a {
+        color: #3498db;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+      body{
+        padding: 20px;
+ 
+      .registration-container {
+        max-width: 100%;
+        padding: 30px;
+        /* Adjust max-width for smaller screens */
+      }
+
+      form {
+        max-width: 100%; /* Adjust max-width for smaller screens */
+
+        label,
+        input,
+        button,
+        .sign-in-link {
+          width: 100%; /* Make elements full width on smaller screens */
+        }
+      }
+    }
+  }
+}

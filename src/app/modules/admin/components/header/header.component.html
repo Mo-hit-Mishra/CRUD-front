@@ -1,0 +1,18 @@
+
+<nav class="navbar">
+    <div class="navbar-brand">Admin</div>
+    <form class="navbar-search">
+      <input type="text" placeholder="Search" formControlName="searchQuery" />
+      <!-- <button type="button" (click)="search()">Search</button> -->
+    </form>
+    <ul class="navbar-links">
+      <li routerLinkActive="active"><a routerLink="./home">Home</a></li>
+      <li routerLinkActive="active"><a routerLink="./about">About</a></li>
+      <li routerLinkActive="active"><a routerLink="./services">Services</a></li>
+      <li routerLinkActive="active"><a routerLink="./contact">Contact</a></li>
+      <div class="logout-container" (click)="logout()">
+        <button class="b1" (click)="logout()">Logout</button>
+      </div>
+    </ul>
+  </nav>
+  

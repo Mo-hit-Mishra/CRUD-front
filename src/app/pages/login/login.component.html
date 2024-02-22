@@ -1,0 +1,46 @@
+<!-- login.component.html -->
+
+<body>
+  <app-header> </app-header>
+  <br>
+  <br>
+  <div class="login-container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <h2>Login</h2>
+  
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email" required>
+        <div *ngIf="loginForm?.get('email')?.hasError('required') && loginForm?.get('email')?.touched" class="error-message">
+          Email is required.
+        </div>
+        <div *ngIf="loginForm?.get('email')?.hasError('email') && loginForm?.get('email')?.touched" class="error-message">
+          Invalid email address.
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <div class="password-input-container">
+          <input type="{{ showPassword ? 'text' : 'password' }}" id="password" formControlName="password" required>
+          <i class="fa fa-eye show-password-icon" (click)="togglePasswordVisibility()"></i> Show Password
+        </div>
+        <div *ngIf="loginForm.get('password')?.hasError('required') && loginForm?.get('password')?.touched" class="error-message">
+          Password is required.
+        </div>
+        <div *ngIf="loginForm.get('password')?.hasError('minlength') && loginForm?.get('password')?.touched" class="error-message">
+          Password must be at least 6 characters long.
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="loginForm.invalid"  (click)="onSubmit()">Login</button>
+      <p class="forget-password-link">
+        <a (click)="onForgetPassword()" routerLink="/forget-password">Forgot Password?</a>
+      </p>
+    
+      <p class="sign-up-link">
+        Don't have an account? <a routerLink="/new-user">Sign Up</a>
+      </p>
+    </form>
+  </div>
+</body>

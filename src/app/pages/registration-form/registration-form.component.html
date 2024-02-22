@@ -1,0 +1,27 @@
+<body>
+  <!-- registration-form.component.html -->
+  <app-header></app-header> 
+  <br>
+
+<div class="registration-container">
+  <h2>Register</h2>
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" formControlName="fullName">
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" formControlName="username">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password">
+
+    <button type="submit" [disabled]="registrationForm.invalid">Register</button>
+    <p class="sign-in-link">
+      Already have an account? <a routerLink="/login">Sign In</a>
+    </p>
+  </form>
+</div>  
+</body>

@@ -1,0 +1,145 @@
+/* Global styles */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar styles */
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .navbar-search {
+    display: flex;
+    align-items: center;
+
+    input {
+      padding: 8px;
+      margin-right: 5px;
+      border: none;
+      border-radius: 3px;
+    }
+
+    .b1 {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: gray;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgb(156, 153, 153);
+      }
+
+      &:disabled {
+        background-color: #bdc3c7;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .navbar-links {
+    list-style: none;
+    display: flex;
+
+    li {
+      margin: 0 15px;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #ecf0f1;
+        }
+      }
+    }
+  }
+}
+
+/* Header styles */
+
+header {
+  /* Your existing header styles */
+
+  .logout-container {
+    cursor: pointer;
+    padding: 10px;
+    margin-left: auto; // Push the logout button to the right
+    color: #fff; // Example text color for emphasis
+    background-color: #007bff; // Example background color for emphasis
+    border: 1px solid #0056b3; // Example border color for emphasis
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #0056b3; // Example hover background color for emphasis
+    }
+  }
+}
+
+/* Media queries for responsiveness */
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .navbar-links {
+      margin-top: 10px;
+
+      li {
+        margin: 10px 0;
+
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .navbar-search {
+      width: 100%;
+      margin-top: 14px;
+
+      input {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      .b1 {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+
+    .navbar-links {
+      margin-top: 10px;
+      flex-direction: column;
+
+      li {
+        margin: 5px 5px;
+      }
+    }
+  }
+}
